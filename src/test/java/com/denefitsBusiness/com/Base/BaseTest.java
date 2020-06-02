@@ -19,6 +19,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
 import com.denefitsBusiness.com.util.ExtentManager;
+import com.paulhammant.ngwebdriver.NgWebDriver;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -32,6 +33,7 @@ public class BaseTest {
 	public Properties prop;
 	public ExtentReports rep = ExtentManager.getInstance();
 	public static ExtentTest test;
+	public static NgWebDriver ngdriver;
 	
 	
 	public void openBrowser(String bType)
@@ -39,7 +41,7 @@ public class BaseTest {
 		prop = new Properties();
 		try
 		{
-			FileInputStream fn = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\business\\denefits\\com\\resources\\projectConfig.properties");
+			FileInputStream fn = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\config.properties");
 		    prop.load(fn);
 		} catch (Exception e) 
 		{
@@ -47,15 +49,17 @@ public class BaseTest {
 			e.printStackTrace();
 		}
 		
-		if((prop.getProperty(bType)).equalsIgnoreCase("mozilla"))
+		if(bType.equalsIgnoreCase("mozilla"))
 		{
 			//System.setProperty("webdriver.gecko.driver", "D:\\New folder (2)\\Practise\\Jars\\jars\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
-		else if((prop.getProperty(bType)).equalsIgnoreCase("chrome"))
+		else if(bType.equalsIgnoreCase("chrome"))
 		{
 			driver = new ChromeDriver();
 		}
+		
+		test.log(LogStatus.INFO, "Opening Browser");
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -64,6 +68,7 @@ public class BaseTest {
 	
 	public void navigate(String url)
 	{
+		test.log(LogStatus.INFO, "Navigating to url " +prop.getProperty(url) );
 		driver.get(prop.getProperty(url));
 		
 	}
@@ -75,6 +80,7 @@ public class BaseTest {
 	
 	public void type(String locatorkey, String text)
 	{
+		test.log(LogStatus.INFO, "Typing on the field "+ prop.getProperty(locatorkey) +"----with text----"+ text );
 		getElement(locatorkey).sendKeys(text);
 	}
 	
