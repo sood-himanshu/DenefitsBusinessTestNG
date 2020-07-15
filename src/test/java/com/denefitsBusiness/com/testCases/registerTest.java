@@ -93,50 +93,6 @@ public class registerTest extends BaseTest{
 			System.out.println("Able to Register");
 		}
 		
-		
-		 
-		/* getObject("register_first_name_input").sendKeys(firstName);
-		 getObject("register_last_name_input").sendKeys(lastName);
-		 getObject("register_phone_input").click();
-		 getObject("register_phone_input").sendKeys(Keys.HOME, phone);
-		 getObject("register_email_input").sendKeys(email);
-		 getObject("register_password_input").sendKeys(password);
-		 
-		 Select s = new Select(getObject("register_industry_drop_down"));
-		 Thread.sleep(2000);
-		 s.selectByIndex(1);
-		 Thread.sleep(3000);
-		 s= new Select(getObject("register_sub_industry_drop_down"));
-		 s.selectByIndex(1);
-		 getObject("register_address_input").sendKeys(address);
-		 
-		 getObject("register_zip_code_drop_down").click();
-		 Thread.sleep(2000);
-		 getObject("register_zip_input").sendKeys("12345");
-		 Thread.sleep(4000);
-		 getObject("register_zip_input").sendKeys(Keys.ENTER);
-		 getObject("sign_up_button").click();
-		 Thread.sleep(2000);
-		 TestUtil.takeScreenShot("Check-Register");
-		 Thread.sleep(7000);
-		 
-		 
-		 try
-			{
-				// Logic to check register successful or not
-				String signUpButton=driver.findElement(By.xpath(OR.getProperty("sign_up_button"))).getText();
-			
-				if(signUpButton.equals("Sign Up")){
-					System.out.println("Not able to register");
-				}else{
-					System.out.println("Able to register");
-				}
-			}
-			catch(Throwable t)
-			{
-				TestUtil.takeScreenShot("Registered");
-				System.out.println("Able to Register");
-			}	*/
 	}
 	
 	

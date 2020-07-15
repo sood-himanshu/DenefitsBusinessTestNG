@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="63577" started-at="2020-06-16T09:32:19 IST" finished-at="2020-06-16T09:33:22 IST">
+  <suite name="Default suite" duration-ms="77593" started-at="2020-07-14T10:53:42 IST" finished-at="2020-07-14T10:54:59 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="63577" started-at="2020-06-16T09:32:19 IST" finished-at="2020-06-16T09:33:22 IST">
-      <class name="com.denefitsBusiness.com.testCases.registerTest">
-        <test-method status="PASS" signature="login(java.util.Hashtable)[pri:0, instance:com.denefitsBusiness.com.testCases.registerTest@4ddced80]" name="login" duration-ms="62429" started-at="2020-06-16T09:32:20 IST" data-provider="data" finished-at="2020-06-16T09:33:22 IST">
+    <test name="Default test" duration-ms="77593" started-at="2020-07-14T10:53:42 IST" finished-at="2020-07-14T10:54:59 IST">
+      <class name="com.denefitsBusiness.com.testCases.createContractTest">
+        <test-method status="PASS" signature="createContract(java.util.Hashtable)[pri:0, instance:com.denefitsBusiness.com.testCases.createContractTest@78e117e3]" name="createContract" duration-ms="76089" started-at="2020-07-14T10:53:43 IST" data-provider="data" finished-at="2020-07-14T10:54:59 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{FirstName=Test Doc 14, Password=tester1234, LastName=June, Runmode=Y, Phone=7.755114455E9, Email=testdoc14junebus@mailinator.com, Browser=Mozilla, Address=High Street}]]>
+                <![CDATA[{CustomerEmail=testpatient14july@mailinator.com, ServiceCost=1000.0, ContractType=2.0, DownPayment=100.0, Runmode=Y, Browser=Mozilla}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.denefitsBusiness.com.testCases.registerTest@4ddced80]" name="quit" is-config="true" duration-ms="292" started-at="2020-06-16T09:33:22 IST" finished-at="2020-06-16T09:33:22 IST">
+        </test-method> <!-- createContract -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.denefitsBusiness.com.testCases.createContractTest@78e117e3]" name="quit" is-config="true" duration-ms="558" started-at="2020-07-14T10:54:59 IST" finished-at="2020-07-14T10:54:59 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- com.denefitsBusiness.com.testCases.registerTest -->
+      </class> <!-- com.denefitsBusiness.com.testCases.createContractTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

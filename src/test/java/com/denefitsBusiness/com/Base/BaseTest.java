@@ -117,6 +117,15 @@ public class BaseTest {
 		return e;
 	}
 	
+	
+	public void login()
+	{
+		type("login_email_name", prop.getProperty("static_login_email"));
+		type("login_pass_xpath", prop.getProperty("static_login_pass"));
+		click("login_signIn_xpath");
+	}
+	
+	
 	/*************Validation**********************************************************/
 	
 	public boolean verifyTitle()
